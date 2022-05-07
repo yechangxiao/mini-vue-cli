@@ -26,9 +26,10 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: [
+          'thread-loader',
+          'babel-loader'
+        ]
       },
       {
         test: /\.(css|s[ac]ss)$/,

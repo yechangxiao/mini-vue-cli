@@ -27,6 +27,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
+          'cache-loader',
           'thread-loader',
           'babel-loader'
         ]

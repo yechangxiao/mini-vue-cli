@@ -17,6 +17,7 @@
     "babel-loader": "^8.2.5",
     "cache-loader": "^4.1.0",
     "clean-webpack-plugin": "^4.0.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
     "html-webpack-plugin": "^4.5.2",
     "progress-webpack-plugin": "^1.0.16",
     "thread-loader": "^3.0.4",

@@ -6,6 +6,8 @@ import Vue from 'vue'
 // import 'regenerator-runtime/runtime';
 
 const img = require('@/assets/images/test.png')
+console.log('DefinePlugin', process.env.NODE_ENV, VueApp);
+
 
 const node = document.createElement('img')
 node.src = img

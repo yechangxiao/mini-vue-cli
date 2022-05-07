@@ -1,3 +1,4 @@
+// 最初使用的带各种尝试的webpack配置文件
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -65,11 +66,12 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'js/chunk-[contenthash].js',
     // publicPath: '/dist/',
+    // publicPath: 'https://cdn.example.com/assets/',
     clean: true
   },
   devServer: {
-    static: path.join(__dirname, 'public'),
-    port: 9000
+    // static: path.join(__dirname, 'public'),
+    // port: 9000
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -9,7 +9,7 @@ module.exports = {
   mode: 'development',
   target: 'web',
   entry: {
-    main: './main.js',
+    main: './src/main.js',
   },
   module: {
     rules: [
@@ -62,10 +62,14 @@ module.exports = {
     }
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: 'js/chunk-[contenthash].js',
-    publicPath: '/dist/',
+    // publicPath: '/dist/',
     clean: true
+  },
+  devServer: {
+    static: path.join(__dirname, 'public'),
+    port: 9000
   },
   plugins: [
     new HtmlWebpackPlugin({

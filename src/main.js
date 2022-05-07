@@ -1,11 +1,11 @@
-import { add } from './utils/add'
-import './src/styles/index.scss'
+import { add } from '@/utils/add'
+import '@/styles/index.scss'
 import Vue from 'vue'
 
 // import 'core-js/stable';
 // import 'regenerator-runtime/runtime';
 
-const img = require('./src/assets/images/test.png')
+const img = require('@/assets/images/test.png')
 
 const node = document.createElement('img')
 node.src = img

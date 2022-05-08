@@ -1,9 +1,11 @@
 // webpack-dev-server
 // dev环境的source-map
+const path = require('path')
 const { merge } = require('webpack-merge')
 const webpack = require('webpack')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const base = require('./webpack.base')
+const StylelintWebpackPlugin = require('stylelint-webpack-plugin')
 
 module.exports = merge(base, {
   mode: 'development',
@@ -23,6 +25,13 @@ module.exports = merge(base, {
     // new webpack.HotModuleReplacementPlugin()
     new ESLintPlugin({
       fix: true
-    })
+    }),
+    new StylelintWebpackPlugin({
+      context: 'src',
+      // Stylelint的配置文件读取
+      configFile: path.resolve(__dirname, '../stylelint.config.js'),
+      // 检查的文件范围
+      files: ['**/*.scss'],
+    }),
   ]
 })

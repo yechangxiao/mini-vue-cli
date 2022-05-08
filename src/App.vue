@@ -23,9 +23,11 @@ export default {
 .app {
   width: 50vw;
   height: 50vh;
+
   // background-color: pink;
-  background-image: url(@/assets/images/test.png);
+  background-image: url("@/assets/images/test.png");
   background-repeat: no-repeat;
+
   // >>> .app {
   //   color: blue;
   // }

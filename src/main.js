@@ -25,6 +25,9 @@ new Promise((resolve) => {
   // Array.at
 });
 
+const a = 1
+a = 2
+
 Promise.allSettled([]);
 
 new Vue({

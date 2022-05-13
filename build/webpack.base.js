@@ -10,6 +10,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const loader = require('css-loader')
 const { VueLoaderPlugin } = require('vue-loader')
 const ProgressPlugin = require('progress-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   target: 'web',
@@ -97,6 +98,11 @@ module.exports = {
     //   dependenciesCount: 10000,
     //   percentBy: null,
     // }
-    )
+    ),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public' }
+      ]
+    })
   ]
 }
